@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { Button } from "@/components/ui/button";
 
 function NotFoundComponent() {
   return (
@@ -72,6 +73,29 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+function Header() {
+  return (
+    <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <Link to="/" className="flex items-baseline gap-2">
+          <span className="text-2xl font-black tracking-tight text-primary">NYARUKA</span>
+          <span className="text-xs font-bold tracking-widest text-accent uppercase">Haha</span>
+        </Link>
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="/#how" className="hover:text-primary transition">How it works</a>
+          <a href="/#categories" className="hover:text-primary transition">What we shop</a>
+          <a href="/#pricing" className="hover:text-primary transition">Pricing</a>
+        </nav>
+        <Link to="/order">
+          <Button className="gap-2 rounded-full" size="sm">
+            Order Now
+          </Button>
+        </Link>
+      </div>
+    </header>
+  );
+}
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
@@ -118,7 +142,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+      <Header />
       <Outlet />
     </QueryClientProvider>
   );
