@@ -48,24 +48,6 @@ const testimonials = [
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Nav */}
-      <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="/" className="flex items-baseline gap-2">
-            <span className="text-2xl font-black tracking-tight text-primary">NYARUKA</span>
-            <span className="text-xs font-bold tracking-widest text-accent uppercase">Haha</span>
-          </a>
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-            <a href="#how" className="hover:text-primary transition">How it works</a>
-            <a href="#categories" className="hover:text-primary transition">What we shop</a>
-            <a href="#pricing" className="hover:text-primary transition">Pricing</a>
-          </nav>
-          <Button className="gap-2 rounded-full" size="sm">
-            <MessageCircle className="size-4" /> WhatsApp us
-          </Button>
-        </div>
-      </header>
-
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
