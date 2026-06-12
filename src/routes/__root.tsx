@@ -82,8 +82,8 @@ function Header() {
           <span className="text-xs font-bold tracking-widest text-accent uppercase">Haha</span>
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="/#how" className="hover:text-primary transition">How it works</a>
-          <a href="/#categories" className="hover:text-primary transition">What we shop</a>
+          <Link to="/" className="hover:text-primary transition">HAHA · Shopping</Link>
+          <Link to="/umusare" className="hover:text-primary transition">UMUSARE · Driver</Link>
           <a href="/#pricing" className="hover:text-primary transition">Pricing</a>
         </nav>
         <Link to="/order">
